@@ -19,5 +19,8 @@
   "homepage": "https://github.com/itskold/js_project#readme",
   "dependencies": {
     "bootstrap": "^4.2.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.1"
   }
 }
