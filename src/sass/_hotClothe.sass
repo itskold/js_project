@@ -1,0 +1,33 @@
+#hotClothes
+    .blog
+        h1
+            font-size: 18px
+            font-family: $poppins
+            padding-top: 5rem
+            padding-bottom: 2rem
+        #blogCarousel
+            ol
+                left: 0
+                top: auto
+                bottom: -40px
+                li
+                    background: white
+                    border: solid 1px black
+                    border-radius: 50%
+                    width: 8px
+                    height: 8px
+                .active
+                    background: #707070
+            .carousel-inner
+                .carousel-item
+                    a
+                        text-align: center
+                        &:hover
+                            text-decoration: none
+                        p
+                            text-transform: capitalize
+                            color: black
+                            font-weight: bold
+                            font-size: 12px
+                        img
+                            max-width: 100%
