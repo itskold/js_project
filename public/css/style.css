@@ -17971,29 +17971,30 @@ readers do not read off random characters that represent icons */
 }
 
 #banner {
+  margin: 5px 15px;
   background-color: #F3F3F3;
 }
 #banner .row {
   background-color: #F3F3F3;
 }
-#banner .row .col-4 .jumbotron {
+#banner .row .col-lg-4 .jumbotron {
   background-color: #F3F3F3;
 }
-#banner .row .col-4 .jumbotron .lead {
+#banner .row .col-lg-4 .jumbotron .lead {
   font-size: 45px !important;
 }
-#banner .row .col-4 .jumbotron h1 {
+#banner .row .col-lg-4 .jumbotron h1 {
   font-size: 80px;
 }
-#banner .row .col-4 .jumbotron p {
+#banner .row .col-lg-4 .jumbotron p {
   font-size: 12px;
   margin-bottom: Opx !important;
   margin-block-end: 0px !important;
 }
-#banner .row .col-4 .jumbotron a {
+#banner .row .col-lg-4 .jumbotron a {
   font-size: 9px;
 }
-#banner .row .col-4 img {
+#banner .row .col-lg-4 img {
   width: 80% !important;
 }
 
