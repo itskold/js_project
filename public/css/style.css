@@ -18038,4 +18038,22 @@ readers do not read off random characters that represent icons */
   font-weight: bold;
 }
 
+#parallax {
+  background: url("../../public/images/cta-bg.jpg") no-repeat fixed !important;
+  background-size: contain;
+}
+#parallax h1 {
+  font-size: 30px;
+  padding-top: 15rem;
+  padding-bottom: 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+#parallax a {
+  font-size: 10px;
+  margin-bottom: 15rem;
+}
+
 /*# sourceMappingURL=style.css.map */
