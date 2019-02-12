@@ -17998,4 +17998,22 @@ readers do not read off random characters that represent icons */
   width: 80% !important;
 }
 
+#catalog {
+  margin: 30px 15px;
+}
+#catalog .row .col-sm-4 img {
+  position: relative;
+}
+#catalog .row .col-sm-4 a {
+  font-size: 1.3rem;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  border-bottom: solid 1px white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*# sourceMappingURL=style.css.map */
