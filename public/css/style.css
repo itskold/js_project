@@ -19228,4 +19228,50 @@ readers do not read off random characters that represent icons */
 #info .row .col-sm-4 a {
   font-size: 9px;
 }
+
+footer {
+  background-color: #212121;
+  color: white;
+}
+
+footer .container .row .col-sm-4 {
+  border-color: #939393 !important;
+  font-family: "Poppins", sans-serif;
+}
+
+footer .container .row .col-sm-4 h1 {
+  margin-bottom: 40px;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer .container .row .col-sm-4 a {
+  text-transform: none;
+  text-transform: capitalize;
+  color: #939393;
+  font-size: 12px;
+}
+
+footer .container .row .col-sm-4 hr {
+  background-color: #939393;
+}
+
+footer .container .row .col-sm-4 p {
+  color: #939393;
+  font-size: 12px;
+}
+
+footer .container .row .tags a {
+  display: inline-block;
+  border: solid #939393 1px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+footer .container .row .tags a:hover {
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
