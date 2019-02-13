@@ -19039,7 +19039,6 @@ readers do not read off random characters that represent icons */
 #nav ul li a {
   font-size: 8px;
   text-decoration: none;
-  color: gray;
 }
 
 #nav #js {
@@ -19190,7 +19189,6 @@ readers do not read off random characters that represent icons */
 
 #hotClothes .blog #blogCarousel .carousel-inner .carousel-item a p {
   text-transform: capitalize;
-  color: black;
   font-weight: bold;
   font-size: 12px;
 }
@@ -19207,7 +19205,6 @@ readers do not read off random characters that represent icons */
   padding: 50px 0;
   float: left;
   margin: 0px;
-  border: solid white 10px;
 }
 
 #info .row .col-sm-4 i {
@@ -19273,5 +19270,51 @@ footer .container .row .tags a {
 
 footer .container .row .tags a:hover {
   text-decoration: none;
+}
+
+.modeDark {
+  background-color: white;
+  opacity: 1;
+}
+
+.bg-noir {
+  background-color: black;
+}
+
+.noir {
+  color: black;
+}
+
+.gris {
+  color: gray;
+}
+
+.blanc {
+  color: white;
+}
+
+.border-blanc {
+  border: solid white 10px;
+}
+
+.border-noir {
+  border: solid black 10px !important;
+}
+
+#modal h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+#modal p {
+  margin-bottom: 3px;
+}
+
+#modal input {
+  margin-bottom: 10px;
+}
+
+#modal button {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
