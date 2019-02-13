@@ -19028,10 +19028,6 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-#nav {
-  padding-bottom: 30px;
-}
-
 #nav h1 strong {
   font-size: 30px;
 }
@@ -19165,6 +19161,7 @@ readers do not read off random characters that represent icons */
   left: 0;
   top: auto;
   bottom: -40px;
+  z-index: 0;
 }
 
 #hotClothes .blog #blogCarousel ol li {
@@ -19299,6 +19296,20 @@ footer .container .row .tags a:hover {
 
 .border-noir {
   border: solid black 10px !important;
+}
+
+.stickyElem {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: +4;
+  padding-bottom: 5px !important;
+}
+
+.logoDiff {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
 }
 
 #modal h1 {

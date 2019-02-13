@@ -1,6 +1,7 @@
 let lesInputs = document.getElementsByTagName('input')
 let leBody = document.getElementsByTagName('body')[0]
 let leH1Header = document.getElementById('nav').getElementsByTagName('h1')[0]
+let leHeader = document.getElementById('nav')
 let laNavBar = document.getElementById('nav').getElementsByTagName('a')
 let leFooter = document.getElementsByTagName('footer')[0]
 let leBgCatalog = document.getElementById('catalog').getElementsByTagName('img') // utilisation bgDark
@@ -61,3 +62,59 @@ lesInputs[1].addEventListener('click',()=>{
     console.log(laNavBar[1])
 })
 // BOUTON CONNEXION
+let leModal = document.getElementById('modal')
+let titreConnect = document.getElementById('modal').getElementsByTagName('h1')[0]
+let buttonConnect = document.getElementById('modal').getElementsByTagName('button')[0]
+let buttonSub = document.getElementById('modal').getElementsByTagName('button')[1]
+let lesH1 = document.getElementById('modal').getElementsByTagName('h1')
+let connexion = document.getElementById('connexion')
+let inscription = document.getElementById('inscription')
+
+
+
+let CompteCreer = false
+
+let afficheInscriptionNotDone =()=>{
+    lesH1[0].classList.toggle('d-block')
+    connexion.classList.toggle('d-block')
+    inscription.classList.toggle('d-block')
+}
+let afficheInscriptionDone =()=>{
+    connexion.classList.toggle('d-block')
+    inscription.classList.toggle('d-block')
+}
+let successConnect =()=>{
+    lesH1[1].classList.toggle('d-block')
+    // let dispModal = leModal.classList.toggle('d-block')
+}
+let suppModal =()=>{
+    leModal.classList.remove('d-block')
+}
+
+lesInputs[2].addEventListener('click',()=>{
+    let dispModal = leModal.classList.toggle('d-block')
+    connexion.classList.toggle('d-block')
+    buttonConnect.addEventListener('click',()=>{
+        if(CompteCreer==false){
+            lesH1[0].classList.toggle('d-block')
+            setTimeout(afficheInscriptionNotDone,5000)
+            CompteCreer = true
+        } else {
+            successConnect()
+            setTimeout(suppModal,1000)
+        }
+    })
+    buttonSub.addEventListener('click',()=>{
+        CompteCreer = true
+        afficheInscriptionDone()
+    })
+})
+document.addEventListener('scroll',()=>{
+    if(document.documentElement.scrollTop>600){
+        leHeader.classList.add('stickyElem')
+        leH1Header.classList.add('logoDiff')
+    } else{
+        leHeader.classList.remove('stickyElem')
+        leH1Header.classList.remove('logoDiff')
+    }
+})

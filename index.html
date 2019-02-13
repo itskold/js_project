@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <header id="nav">
+    <header id="nav" class="bg-white">
         <div>
         <h1 class="text-center pt-5 pb-3"><strong>emporium.</strong></h1>
         <ul class="text-uppercase list-inline text-center py-4">
@@ -29,14 +29,31 @@
             <input class="btn btn-dark text-white" type="button" value="CONNEXION">
         </div>
         <!-- MODAL -->
-        <div id="modal" class="bg-noir py-5 text-center">
-            <h1 class="text-light">CONNEXION</h1>
-            <p class="text-light">Nom de compte</p>
-            <input type="text" name="" id="" class="mx-auto d-block">
-            <p class="text-light">Mot de passe</p>
-            <input type="password" name="" id="" class="mx-auto d-block">
-            <p class="text-light d-inline-block">Se souvenir de moi</p>
-            <input type="checkbox" name="" id="" class="">
+        <div id="modal" class="bg-noir py-5 text-center d-none">
+            <h1 class="text-danger text-uppercase text-center d-none">Veuillez vous inscrire!</h1>
+            <h1 class="text-success text-uppercase text-center d-none">Connexion avec succés!</h1>
+            <div id="connexion" class="d-none">
+                <h1 class="text-light">CONNEXION</h1>
+                <p class="text-light">Nom de compte</p>
+                <input type="text" name="" class="mx-auto d-block">
+                <p class="text-light">Mot de passe</p>
+                <input type="password" name=""  class="mx-auto d-block">
+                <p class="text-light d-inline-block">Se souvenir de moi</p>
+                <input type="checkbox" name="" id="check"  class="">
+            </div>
+            <div id="inscription" class="d-none">
+                <h1 class="text-light">INSCRIPTION</h1>
+                <p class="text-light">Nom de compte</p>
+                <input type="text" name="" class="mx-auto d-block">
+                <p class="text-light">Mot de passe</p>
+                <input type="password" name=""  class="mx-auto d-block">
+                <p class="text-light">Adresse mail</p>
+                <input type="text" name="" class="mx-auto d-block">
+                <p class="text-light">Confirmation adresse mail</p>
+                <input type="password" name=""  class="mx-auto d-block">
+                <p class="text-light d-inline-block">Condition d'utilisation<a href="#">CGU</a></p>
+                <input type="checkbox" name="" id="check"  class="">
+            </div>
             <div>
                 <button class="btn btn-danger d-inline-block mx-auto">CONNEXION</button>
                 <button class="btn btn-success d-inline-block mx-auto">INSCRIPTION</button>
@@ -196,7 +213,7 @@
                                     <div class="col-md-3">
                                         <a href="#">
                                             <img src="./public/images/products/product-tshitr-white-700x500.jpg" alt="Image">
-                                            <p noir>white t-shirt</p>
+                                            <p class="pt-3 noir">white t-shirt</p>
                                             <p class="text-danger">$99.99</p>
                                         </a>
                                     </div>
