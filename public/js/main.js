@@ -3,10 +3,11 @@ let leBody = document.getElementsByTagName('body')[0]
 let leH1Header = document.getElementById('nav').getElementsByTagName('h1')[0]
 let leHeader = document.getElementById('nav')
 let laNavBar = document.getElementById('nav').getElementsByTagName('a')
+let leBanner = document.getElementById('banner')
 let leFooter = document.getElementsByTagName('footer')[0]
 let leBgCatalog = document.getElementById('catalog').getElementsByTagName('img') // utilisation bgDark
 let leH1Product = document.getElementById('product').getElementsByTagName('h1')[0]
-let lesNomProduits = document.getElementById('product').getElementsByTagName('img') // rajouter le nextElement pour cibler les P
+let lesNomProduits = document.getElementById('product').getElementsByClassName('zoom') // rajouter le nextElement pour cibler les P
 let leH1HotClothe = document.getElementById('hotClothes').getElementsByTagName('h1')[0]
 let lesNomHotClothe = document.getElementById('hotClothes').getElementsByClassName('carousel-inner')[0].getElementsByTagName('img') // rajouter le nextElement pour cibler les P
 let lesBorderInfo = document.getElementById('info').getElementsByClassName('col-sm-4')
@@ -117,8 +118,11 @@ document.addEventListener('scroll',()=>{
     if(document.documentElement.scrollTop>600){
         leHeader.classList.add('stickyElem')
         leH1Header.classList.add('logoDiff')
+        leBanner.classList.add('bouf')
+        leH1Header.classList.add('translate')
     } else{
         leHeader.classList.remove('stickyElem')
         leH1Header.classList.remove('logoDiff')
+        leBanner.classList.remove('bouf')
     }
 })

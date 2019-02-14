@@ -33,26 +33,30 @@
             <h1 class="text-danger text-uppercase text-center d-none">Veuillez vous inscrire!</h1>
             <h1 class="text-success text-uppercase text-center d-none">Connexion avec succés!</h1>
             <div id="connexion" class="d-none">
-                <h1 class="text-light">CONNEXION</h1>
-                <p class="text-light">Nom de compte</p>
-                <input type="text" name="" class="mx-auto d-block">
-                <p class="text-light">Mot de passe</p>
-                <input type="password" name=""  class="mx-auto d-block">
-                <p class="text-light d-inline-block">Se souvenir de moi</p>
-                <input type="checkbox" name="" id="check"  class="">
+                <form action="">
+                    <h1 class="text-light">CONNEXION</h1>
+                    <p class="text-light">Nom de compte</p>
+                    <input type="text" name="" class="mx-auto d-block" required>
+                    <p class="text-light">Mot de passe</p>
+                    <input type="password" name=""  class="mx-auto d-block" required>
+                    <p class="text-light d-inline-block">Se souvenir de moi</p>
+                    <input type="checkbox" name="" id="check"  class="">
+                </form>
             </div>
             <div id="inscription" class="d-none">
-                <h1 class="text-light">INSCRIPTION</h1>
-                <p class="text-light">Nom de compte</p>
-                <input type="text" name="" class="mx-auto d-block">
-                <p class="text-light">Mot de passe</p>
-                <input type="password" name=""  class="mx-auto d-block">
-                <p class="text-light">Adresse mail</p>
-                <input type="text" name="" class="mx-auto d-block">
-                <p class="text-light">Confirmation adresse mail</p>
-                <input type="password" name=""  class="mx-auto d-block">
-                <p class="text-light d-inline-block">Condition d'utilisation<a href="#">CGU</a></p>
-                <input type="checkbox" name="" id="check"  class="">
+                <form action="">
+                    <h1 class="text-light">INSCRIPTION</h1>
+                    <p class="text-light">Nom de compte</p>
+                    <input type="text" name="" class="mx-auto d-block" required>
+                    <p class="text-light">Mot de passe</p>
+                    <input type="password" name=""  class="mx-auto d-block" required>
+                    <p class="text-light">Adresse mail</p>
+                    <input type="text" name="" class="mx-auto d-block" required>
+                    <p class="text-light">Confirmation adresse mail</p>
+                    <input type="password" name=""  class="mx-auto d-block" required>
+                    <p class="text-light d-inline-block">Condition d'utilisation<a href="#">CGU</a></p>
+                    <input type="checkbox" name="" id="check"  class="" required>
+                </form>
             </div>
             <div>
                 <button class="btn btn-danger d-inline-block mx-auto">CONNEXION</button>
@@ -72,7 +76,7 @@
                 </div>
             </div>
             <div class="col-lg-4 px-0">
-                <img class="" src="./public/images/slider-1.jpg" alt="slider-1">
+                <img class="" src="./public/images/slider-1.jpg" alt="slider-1" class="d-sm-none">
             </div>
         </div>
     </div>
@@ -415,8 +419,8 @@
 
 
     <script src="./public/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
