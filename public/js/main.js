@@ -14,6 +14,8 @@ let lesBorderInfo = document.getElementById('info').getElementsByClassName('col-
 // BOUTON NOIR
 lesInputs[0].addEventListener('click',()=>{
     leBody.classList.toggle('bg-noir')
+    leHeader.classList.toggle('bg-white')
+    leHeader.classList.toggle('bg-noir')
     leH1Header.classList.toggle('blanc')
     for(i=0;i<laNavBar.length;i++){
         laNavBar[i].classList.toggle('blanc')
@@ -36,9 +38,11 @@ lesInputs[0].addEventListener('click',()=>{
     lesInputs[0].classList.toggle('bg-noir')
     console.log(laNavBar[1])
 })
-// BOUTON NOIR
+// BOUTON BlANC
 lesInputs[1].addEventListener('click',()=>{
     leBody.classList.toggle('bg-noir')
+    leHeader.classList.toggle('bg-white')
+    leHeader.classList.toggle('bg-noir')
     leH1Header.classList.toggle('blanc')
     for(i=0;i<laNavBar.length;i++){
         laNavBar[i].classList.toggle('blanc')
