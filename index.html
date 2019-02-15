@@ -9,17 +9,38 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="modal" class="py-5 text-center d-none flex-row justify-content-center align-items-center">
+       <div class="content align-items-center rounded bg-light">
+           <form>
+                <h1>CONNEXION</h1>
+                <h2 class="d-none text-center"></h2>
+                <p class="d-none">Nom</p>
+                <input type="text" name="" class="d-none mx-auto" required>
+                <p class="d-none">Prénom</p>
+                <input type="text" name="" class="d-none mx-auto" required>
+                <p class="d-none">Age</p>
+                <input type="text" name="" class="d-none mx-auto" required>
+                <p>Email</p>
+                <input type="mail" name="" class="d-block mx-auto" required>
+                <p>Mot de passe</p>
+                <input type="password" name="" class="d-block mx-auto" required>
+            </form>
+            <button class="btn btn-success mt-4">CONNEXION</button>
+            <button class="btn btn-info mt-4">INSCRIPTION</button>
+            <i class="fas fa-times"></i>
+       </div>
+    </div>
     <!-- NAVBAR -->
     <header id="nav" class="bg-white">
         <div>
         <h1 class="text-center pt-5 pb-3"><strong>emporium.</strong></h1>
         <ul class="text-uppercase list-inline text-center py-4">
-            <li class="list-inline-item px-3"><a href="" class="gris">home</a></li>
-            <li class="list-inline-item px-3"><a href="" class="gris">product</a></li>
-            <li class="list-inline-item px-3"><a href="" class="gris">blog</a></li>
-            <li class="list-inline-item px-3"><a href="" class="gris">elements</a></li>
-            <li class="list-inline-item px-3"><a href="" class="gris">about</a></li>
-            <li class="list-inline-item px-3"><a href="" class="gris">contact</a></li>
+            <li class="list-inline-item px-3"><a href="#banner" class="gris">home</a></li>
+            <li class="list-inline-item px-3"><a href="#product" class="gris">product</a></li>
+            <li class="list-inline-item px-3"><a href="#parallax" class="gris">blog</a></li>
+            <li class="list-inline-item px-3"><a href="#hotClothes" class="gris">elements</a></li>
+            <li class="list-inline-item px-3"><a href="#info" class="gris">about</a></li>
+            <li class="list-inline-item px-3"><a href="#footer" class="gris">contact</a></li>
         </ul>
         </div>
         <!-- BUTTON JS -->
@@ -29,40 +50,6 @@
             <input class="btn btn-dark text-white" type="button" value="CONNEXION">
         </div>
         <!-- MODAL -->
-        <div id="modal" class="bg-noir py-5 text-center d-none">
-            <h1 class="text-danger text-uppercase text-center d-none">Veuillez vous inscrire!</h1>
-            <h1 class="text-success text-uppercase text-center d-none">Connexion avec succés!</h1>
-            <div id="connexion" class="d-none">
-                <form action="">
-                    <h1 class="text-light">CONNEXION</h1>
-                    <p class="text-light">Nom de compte</p>
-                    <input type="text" name="" class="mx-auto d-block" required>
-                    <p class="text-light">Mot de passe</p>
-                    <input type="password" name=""  class="mx-auto d-block" required>
-                    <p class="text-light d-inline-block">Se souvenir de moi</p>
-                    <input type="checkbox" name="" id="check"  class="">
-                </form>
-            </div>
-            <div id="inscription" class="d-none">
-                <form action="">
-                    <h1 class="text-light">INSCRIPTION</h1>
-                    <p class="text-light">Nom de compte</p>
-                    <input type="text" name="" class="mx-auto d-block" required>
-                    <p class="text-light">Mot de passe</p>
-                    <input type="password" name=""  class="mx-auto d-block" required>
-                    <p class="text-light">Adresse mail</p>
-                    <input type="text" name="" class="mx-auto d-block" required>
-                    <p class="text-light">Confirmation adresse mail</p>
-                    <input type="password" name=""  class="mx-auto d-block" required>
-                    <p class="text-light d-inline-block">Condition d'utilisation<a href="#">CGU</a></p>
-                    <input type="checkbox" name="" id="check"  class="" required>
-                </form>
-            </div>
-            <div>
-                <button class="btn btn-danger d-inline-block mx-auto">CONNEXION</button>
-                <button class="btn btn-success d-inline-block mx-auto">INSCRIPTION</button>
-            </div>
-        </div>
     </header>
     <!-- BANNER -->
     <div id="banner" class="change-color">
@@ -375,7 +362,7 @@
         </div>
     </div>
     <!-- FOOTER -->
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="row py-5">
                 <div class="col-sm-4">

@@ -13,7 +13,7 @@ let lesNomHotClothe = document.getElementById('hotClothes').getElementsByClassNa
 let lesBorderInfo = document.getElementById('info').getElementsByClassName('col-sm-4')
 
 // BOUTON NOIR
-lesInputs[0].addEventListener('click',()=>{
+lesInputs[5].addEventListener('click',()=>{
     leBody.classList.toggle('bg-noir')
     leHeader.classList.toggle('bg-white')
     leHeader.classList.toggle('bg-noir')
@@ -35,12 +35,12 @@ lesInputs[0].addEventListener('click',()=>{
     for(i=0;i<lesBorderInfo.length;i++){
         lesBorderInfo[i].classList.toggle('border-noir')
     }
-    lesInputs[1].classList.toggle('modeDark')
-    lesInputs[0].classList.toggle('bg-noir')
+    lesInputs[6].classList.toggle('modeDark')
+    lesInputs[5].classList.toggle('bg-noir')
     console.log(laNavBar[1])
 })
 // BOUTON BlANC
-lesInputs[1].addEventListener('click',()=>{
+lesInputs[6].addEventListener('click',()=>{
     leBody.classList.toggle('bg-noir')
     leHeader.classList.toggle('bg-white')
     leHeader.classList.toggle('bg-noir')
@@ -62,67 +62,99 @@ lesInputs[1].addEventListener('click',()=>{
     for(i=0;i<lesBorderInfo.length;i++){
         lesBorderInfo[i].classList.toggle('border-noir')
     }
-    lesInputs[1].classList.toggle('modeDark')
-    lesInputs[0].classList.toggle('bg-noir')
+    lesInputs[6].classList.toggle('modeDark')
+    lesInputs[5].classList.toggle('bg-noir')
     console.log(laNavBar[1])
 })
 // BOUTON CONNEXION
 let leModal = document.getElementById('modal')
-let titreConnect = document.getElementById('modal').getElementsByTagName('h1')[0]
-let buttonConnect = document.getElementById('modal').getElementsByTagName('button')[0]
-let buttonSub = document.getElementById('modal').getElementsByTagName('button')[1]
-let lesH1 = document.getElementById('modal').getElementsByTagName('h1')
-let connexion = document.getElementById('connexion')
-let inscription = document.getElementById('inscription')
+let exitButton = document.getElementsByTagName('i')[0]
+let contentModal = document.getElementsByClassName('content')[0]
+let buttonConnect = document.getElementsByTagName('button')[0]
+let buttonSub = document.getElementsByTagName('button')[1]
+let lesH2 = document.getElementsByTagName('h2')
+let lesP = document.getElementsByTagName('p')
+let title = document.getElementsByTagName('h1')[0]
+let profil = document.getElementsByTagName('i')[1]
 
+let sub = false
+let subValid = false
 
-
-let CompteCreer = false
-
-let afficheInscriptionNotDone =()=>{
-    lesH1[0].classList.toggle('d-block')
-    connexion.classList.toggle('d-block')
-    inscription.classList.toggle('d-block')
-}
-let afficheInscriptionDone =()=>{
-    connexion.classList.toggle('d-block')
-    inscription.classList.toggle('d-block')
-}
-let successConnect =()=>{
-    lesH1[1].classList.toggle('d-block')
-    // let dispModal = leModal.classList.toggle('d-block')
-}
-let suppModal =()=>{
-    leModal.classList.remove('d-block')
+let retirerContent = ()=>{
+    leModal.classList.add('d-none')
+    leModal.classList.remove('d-flex')
 }
 
-lesInputs[2].addEventListener('click',()=>{
-    let dispModal = leModal.classList.toggle('d-block')
-    connexion.classList.toggle('d-block')
+lesInputs[7].addEventListener('click',()=>{
+    leModal.classList.remove('d-none')
+    leModal.classList.add('d-flex')
+    contentModal.classList.remove('zoomOut')
+    contentModal.classList.add('zoomIn')
+    exitButton.addEventListener('click',()=>{
+        contentModal.classList.remove('zoomIn')
+        contentModal.classList.add('zoomOut')
+        setTimeout(()=>{
+            retirerContent()
+        },450)
+        
+    })
     buttonConnect.addEventListener('click',()=>{
-        if(CompteCreer==false){
-            lesH1[0].classList.toggle('d-block')
-            setTimeout(afficheInscriptionNotDone,5000)
-            CompteCreer = true
-        } else {
-            successConnect()
-            setTimeout(suppModal,1000)
+        if(lesInputs[3].value.length==0 && lesInputs[4].value.length==0){
+            lesH2[0].classList.remove('d-none')
+            lesH2[0].innerText = "Veuillez remplir les champs"
+            lesH2[0].classList.add('text-warning')
+            lesH2[0].classList.remove('text-danger')
+        } else if(lesInputs[3].value.length>0 && lesInputs[4].value.length>0){
+            lesH2[0].classList.remove('d-none')
+            lesH2[0].innerText = "Compte inexistant!"
+            lesH2[0].classList.add('text-danger')
+            lesH2[0].classList.remove('text-warning')
+        } else if(lesInputs[3].value.length==0){
+            lesH2[0].classList.remove('d-none')
+            lesH2[0].innerText = 'Login undefined!'
+            lesH2[0].classList.add('text-danger')
+            lesH2[0].classList.remove('text-warning')
+        } else if(lesInputs[4].value.length==0){
+            lesH2[0].classList.remove('d-none')
+            lesH2[0].innerText = 'Password undefined!'
+            lesH2[0].classList.add('text-danger')
+            lesH2[0].classList.remove('text-warning')
         }
+
     })
     buttonSub.addEventListener('click',()=>{
-        CompteCreer = true
-        afficheInscriptionDone()
-    })
-})
-document.addEventListener('scroll',()=>{
-    if(document.documentElement.scrollTop>600){
-        leHeader.classList.add('stickyElem')
-        leH1Header.classList.add('logoDiff')
-        leBanner.classList.add('bouf')
-        leH1Header.classList.add('translate')
-    } else{
-        leHeader.classList.remove('stickyElem')
-        leH1Header.classList.remove('logoDiff')
-        leBanner.classList.remove('bouf')
+        if (sub==false){lesInputs[2].classList.remove('d-none')
+        title.innerText = "INSCRIPTION"
+        lesP[0].classList.remove('d-none')
+        lesInputs[0].classList.add('d-block')
+        lesP[1].classList.remove('d-none')
+        lesInputs[1].classList.add('d-block')
+        lesP[2].classList.remove('d-none')
+        lesInputs[2].classList.add('d-block')
+        lesH2[0].classList.add('d-none')
+        buttonConnect.classList.add('d-none')
+        buttonSub.innerText ="INSCRIPTION & CONNEXION"
+        buttonSub.classList.remove('btn-info')
+        buttonSub.classList.add('btn-success')
+        sub = true
     }
+    else if(sub==true){
+        title.innerText = "CONNEXION"
+        lesInputs[0].classList.add('d-none')
+        lesInputs[0].classList.remove('d-block')
+        lesP[0].classList.add('d-none')
+        lesInputs[1].classList.add('d-none')
+        lesInputs[1].classList.remove('d-block')
+        lesP[1].classList.add('d-none')
+        lesInputs[2].classList.add('d-none')
+        lesInputs[2].classList.remove('d-block')
+        lesP[2].classList.add('d-none')
+        buttonSub.innerText ="CONNEXION"
+        subValid = true
+        lesInputs[7].value= `${lesInputs[1].value} ${lesInputs[0].value}`
+        leModal.classList.add('d-none')
+
+    }
+    
+    })
 })
