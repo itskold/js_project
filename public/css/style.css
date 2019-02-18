@@ -19326,6 +19326,8 @@ footer .container .row .tags a:hover {
 }
 
 .blanc {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
   color: white;
 }
 
@@ -19335,6 +19337,11 @@ footer .container .row .tags a:hover {
 
 .border-noir {
   border: solid black 10px !important;
+}
+
+.transition {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 .stickyElem {
@@ -19390,7 +19397,7 @@ footer .container .row .tags a:hover {
 #modal .content {
   position: absolute;
   background-color: white;
-  bottom: 70%;
+  bottom: 65%;
   width: 500px;
   height: auto;
   margin: 10px;

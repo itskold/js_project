@@ -14,6 +14,7 @@ let lesBorderInfo = document.getElementById('info').getElementsByClassName('col-
 
 // BOUTON NOIR
 lesInputs[5].addEventListener('click',()=>{
+    
     leBody.classList.toggle('bg-noir')
     leHeader.classList.toggle('bg-white')
     leHeader.classList.toggle('bg-noir')
@@ -96,7 +97,6 @@ lesInputs[7].addEventListener('click',()=>{
         setTimeout(()=>{
             retirerContent()
         },450)
-        
     })
     buttonConnect.addEventListener('click',()=>{
         if(lesInputs[3].value.length==0 && lesInputs[4].value.length==0){
@@ -136,6 +136,8 @@ lesInputs[7].addEventListener('click',()=>{
         buttonSub.innerText ="INSCRIPTION & CONNEXION"
         buttonSub.classList.remove('btn-info')
         buttonSub.classList.add('btn-success')
+        contentModal.classList.remove('zoomIn')
+        contentModal.classList.add('zoomIn')
         sub = true
     }
     else if(sub==true){
@@ -152,9 +154,25 @@ lesInputs[7].addEventListener('click',()=>{
         buttonSub.innerText ="CONNEXION"
         subValid = true
         lesInputs[7].value= `${lesInputs[1].value} ${lesInputs[0].value}`
-        leModal.classList.add('d-none')
+        contentModal.classList.remove('zoomIn')
+        contentModal.classList.add('zoomOut')
+        setTimeout(()=>{
+            retirerContent()
+        },450)
 
     }
     
     })
+})
+document.addEventListener('scroll',()=>{
+    if(document.documentElement.scrollTop>600){
+        leHeader.classList.add('stickyElem')
+        leH1Header.classList.add('logoDiff')
+        leBanner.classList.add('bouf')
+        leH1Header.classList.add('translate')
+    } else{
+        leHeader.classList.remove('stickyElem')
+        leH1Header.classList.remove('logoDiff')
+        leBanner.classList.remove('bouf')
+    }
 })
