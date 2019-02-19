@@ -2,6 +2,12 @@ html
     scroll-behavior: smooth
 // LES VARIABLE
 $poppins: 'Poppins', sans-serif
+$source : 'Source sans pro'
+$blanc : #ffffff
+$noir : #000000
+$bannerColor : #F3F3F3
+$footerColor : #939393
+$danger : #bd584e
 // IMPORTS DEPENDANCES
 @import '../../node_modules/bootstrap/scss/bootstrap.scss'
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss'
@@ -10,7 +16,12 @@ $poppins: 'Poppins', sans-serif
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss'
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss'
 // LES FONTS
-@import url('https://fonts.googleapis.com/css?family=Poppins')
+@font-face
+    font-family: 'Poppins'
+    src: url('../../public/webfonts/poppins/')
+@font-face
+    font-family: 'Source sans pro'
+    src: url('../../public/webfonts/source-sans-pro/')
 // IMPORTS SECTION DU SITE
 @import '../sass/_navbar.sass' // NavBar
 @import '../sass/_banner.sass' // Banner
