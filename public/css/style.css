@@ -19062,31 +19062,32 @@ readers do not read off random characters that represent icons */
   background-color: #F3F3F3;
 }
 
-#banner .row .col-sm-4 .jumbotron {
+#banner .row .col-5 .jumbotron {
   background-color: #F3F3F3;
 }
 
-#banner .row .col-sm-4 .jumbotron .lead {
-  font-size: 45px !important;
+#banner .row .col-5 .jumbotron .lead {
+  font-size: 45px;
 }
 
-#banner .row .col-sm-4 .jumbotron h1 {
+#banner .row .col-5 .jumbotron h1 {
   font-size: 80px;
 }
 
-#banner .row .col-sm-4 .jumbotron p {
+#banner .row .col-5 .jumbotron .para {
   font-size: 12px;
   margin-bottom: Opx !important;
   -webkit-margin-after: 0px !important;
           margin-block-end: 0px !important;
 }
 
-#banner .row .col-sm-4 .jumbotron a {
+#banner .row .col-5 .jumbotron a {
   font-size: 9px;
 }
 
-#banner .row .col-lg-4 img {
-  width: 80% !important;
+#banner .row .col-5 img {
+  max-width: 100%;
+  width: 70% !important;
 }
 
 #catalog {
@@ -19481,5 +19482,36 @@ footer .container .row .tags a:hover {
 .zoomOut {
   -webkit-animation: zoomOut 0.5s;
           animation: zoomOut 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+  #js {
+    display: none;
+  }
+  #banner .jumbotron .lead {
+    font-size: 35px !important;
+    margin-bottom: 0px;
+  }
+  #banner .jumbotron h1 {
+    font-size: 40px !important;
+  }
+  #banner img {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #banner .jumbotron .lead {
+    font-size: 15px !important;
+  }
+  #banner .jumbotron h1 {
+    font-size: 20px !important;
+  }
+  #banner .jumbotron p {
+    font-size: 9px !important;
+  }
+  #banner img {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

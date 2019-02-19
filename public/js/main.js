@@ -167,12 +167,12 @@ lesInputs[7].addEventListener('click',()=>{
 document.addEventListener('scroll',()=>{
     if(document.documentElement.scrollTop>600){
         leHeader.classList.add('stickyElem')
-        leH1Header.classList.add('logoDiff')
+        leH1Header.classList.add('d-none')
         leBanner.classList.add('bouf')
         leH1Header.classList.add('translate')
     } else{
         leHeader.classList.remove('stickyElem')
-        leH1Header.classList.remove('logoDiff')
+        leH1Header.classList.remove('d-none')
         leBanner.classList.remove('bouf')
     }
 })
