@@ -132,8 +132,19 @@ lesInputs[7].addEventListener('click',()=>{
         lesP[2].classList.remove('d-none')
         lesInputs[2].classList.add('d-block')
         lesH2[0].classList.add('d-none')
-        buttonConnect.classList.add('d-none')
-        buttonSub.innerText ="INSCRIPTION & CONNEXION"
+        buttonConnect.classList.add('bg-info')
+        buttonConnect.addEventListener('click',()=>{
+            title.innerText = "CONNEXION"
+            lesP[0].classList.add('d-none')
+            lesInputs[0].classList.remove('d-block')
+            lesP[1].classList.add('d-none')
+            lesInputs[1].classList.remove('d-block')
+            lesP[2].classList.add('d-none')
+            lesInputs[2].classList.remove('d-block')
+            lesInputs[2].classList.add('d-none')
+            lesH2[0].classList.remove('d-none')
+            sub=false
+        })
         buttonSub.classList.remove('btn-info')
         buttonSub.classList.add('btn-success')
         contentModal.classList.remove('zoomIn')
@@ -153,7 +164,7 @@ lesInputs[7].addEventListener('click',()=>{
         lesP[2].classList.add('d-none')
         buttonSub.innerText ="CONNEXION"
         subValid = true
-        lesInputs[7].value= `${lesInputs[1].value} ${lesInputs[0].value}`
+        // lesInputs[7].value= `${lesInputs[1].value} ${lesInputs[0].value}`
         contentModal.classList.remove('zoomIn')
         contentModal.classList.add('zoomOut')
         setTimeout(()=>{

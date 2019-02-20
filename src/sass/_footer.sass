@@ -9,26 +9,32 @@ footer
                 h1
                     margin-bottom: 40px
                     margin-top: 15px
-                    font-size: 18px
+                    font-size: 14px
                     font-weight: bold
                     text-transform: uppercase
                 a
                     text-transform: none
                     text-transform: capitalize
+                    text-decoration: none
                     color: $footerColor
-                    font-size: 12px
+                    font-size: 14px
+                    &:hover
+                        transition-duration: 0.3
+                        color: $blanc
+
                 hr
                     background-color: $footerColor
                 p
                     color: $footerColor
-                    font-size: 12px
+                    font-size: 15px
             .tags
                 a
                     display: inline-block
                     border: solid $footerColor 1px
-                    padding: 10px 10px
+                    padding: 10px 15px
                     margin-top: 10px
-                    font-size: 12px
+                    font-size: 11px
                     &:hover
+                        transition-duration: 0.3
                         text-decoration: none
                         color: $blanc

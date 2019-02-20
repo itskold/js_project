@@ -19041,12 +19041,20 @@ readers do not read off random characters that represent icons */
   src: url("../../public/webfonts/source-sans-pro/");
 }
 
+#nav {
+  padding: 25px 0;
+}
+
+#nav h1 {
+  font-family: "Poppins", sans-serif;
+}
+
 #nav h1 strong {
   font-size: 30px;
 }
 
 #nav ul li a {
-  font-size: 8px;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -19296,14 +19304,14 @@ footer {
 }
 
 footer .container .row .col-sm-4 {
-  border-color: #939393 !important;
+  border-color: #6A6A6A !important;
   font-family: "Poppins", sans-serif;
 }
 
 footer .container .row .col-sm-4 h1 {
   margin-bottom: 40px;
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -19311,28 +19319,37 @@ footer .container .row .col-sm-4 h1 {
 footer .container .row .col-sm-4 a {
   text-transform: none;
   text-transform: capitalize;
-  color: #939393;
-  font-size: 12px;
+  text-decoration: none;
+  color: #6A6A6A;
+  font-size: 14px;
+}
+
+footer .container .row .col-sm-4 a:hover {
+  -webkit-transition-duration: 0.3;
+          transition-duration: 0.3;
+  color: #ffffff;
 }
 
 footer .container .row .col-sm-4 hr {
-  background-color: #939393;
+  background-color: #6A6A6A;
 }
 
 footer .container .row .col-sm-4 p {
-  color: #939393;
-  font-size: 12px;
+  color: #6A6A6A;
+  font-size: 15px;
 }
 
 footer .container .row .tags a {
   display: inline-block;
-  border: solid #939393 1px;
-  padding: 10px 10px;
+  border: solid #6A6A6A 1px;
+  padding: 10px 15px;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 footer .container .row .tags a:hover {
+  -webkit-transition-duration: 0.3;
+          transition-duration: 0.3;
   text-decoration: none;
   color: #ffffff;
 }
